@@ -47,14 +47,20 @@ class IStream:
         """
         self.input_deque.clear()
         if self.finlines is not None:
-            return next(self.finlines)
+            return next(self.finlines).strip()
         return input()
+
+    def all_lines_raw(self: Self) -> List[str]:
+        """
+        Only permissible if reading a file
+        """
+        return list(self.finlines)
 
     def all_lines(self: Self) -> List[str]:
         """
         Only permissible if reading a file
         """
-        return list(self.finlines)
+        return [line.strip() for line in self.all_lines_raw()]
 
     def all_tokens(self: Self) -> List[str]:
         """
