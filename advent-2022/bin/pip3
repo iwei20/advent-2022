@@ -1,4 +1,4 @@
-#!/home/pleas/advent-py-io/bin/pypy3
+#!/home/pleas/advent-2022/advent-2022/bin/pypy3
 # -*- coding: utf-8 -*-
 import re
 import sys
