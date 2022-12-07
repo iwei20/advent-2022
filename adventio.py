@@ -47,7 +47,10 @@ class IStream:
         """
         self.input_deque.clear()
         if self.finlines is not None:
-            return next(self.finlines).strip()
+            try:
+                return next(self.finlines).strip()
+            except:
+                return ""
         return input()
 
     def all_lines_raw(self: Self) -> List[str]:
