@@ -64,7 +64,7 @@ def calculate(line):
                 if next_state not in search_set:
                     search_set.add(next_state)
                     dfs.append(next_state)
-                if minute > 26:
+                if minute > 28:
                     continue
 
         if 1 <= clay_bot and obsidian_bot < geode_cost[1]:
@@ -85,7 +85,7 @@ def calculate(line):
                 if next_state not in search_set:
                     search_set.add(next_state)
                     dfs.append(next_state)
-                if minute > 26:
+                if minute > 28:
                     continue
         
         if clay_bot < obsidian_cost[1]:
@@ -105,7 +105,7 @@ def calculate(line):
                 if next_state not in search_set:
                     search_set.add(next_state)
                     dfs.append(next_state)
-                if minute > 26:
+                if minute > 28:
                     continue
 
         if True:
@@ -126,7 +126,7 @@ def calculate(line):
                 if next_state not in search_set:
                     search_set.add(next_state)
                     dfs.append(next_state)
-                if minute > 26:
+                if minute > 28:
                     continue
 
                 
