@@ -48,7 +48,7 @@ class IStream:
         self.input_deque.clear()
         if self.finlines is not None:
             try:
-                return next(self.finlines).strip()
+                return next(self.finlines).rstrip()
             except:
                 return ""
         return input()
@@ -63,7 +63,7 @@ class IStream:
         """
         Only permissible if reading a file
         """
-        return [line.strip() for line in self.all_lines_raw()]
+        return [line.rstrip() for line in self.all_lines_raw()]
 
     def all_tokens(self: Self) -> List[str]:
         """
